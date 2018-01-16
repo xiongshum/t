@@ -1,0 +1,7 @@
+
+{
+  "data":[
+    {"value":4, "name":"40%","color":"#dbf8d4","illness":"已使用"},
+    {"value":6, "name":"60%","color":"#74e9c7","illness":"未使用"}
+  ]
+}

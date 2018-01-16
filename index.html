@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="css/lis.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/echarts-all.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/digitalScroll.js"></script>
+    <script type="text/javascript" src="js/lis.js"></script>
+    <script type="text/javascript" src="js/mouseWheel.js"></script>
+</head>
+<body>
+<div class="header">
+    四川省区域LIS系统
+</div>
+<div class="main clearfix">
+    <div class="left">
+        <div class="left-item">
+            <div class="sub-tit">区域LIS系统使用情况<img class="tit-pic" src="images/left01.png"></div>
+            <div class="t-con">
+                <div class="chart-item lt-t">
+                    <div class="ss-tit">区县使用情况</div>
+                    <div class="chart-con" id="chart1">
+                        <p class="chart-tit">全省共接入<span class="em">39</span>个区县</p>
+                        <div id="chart-one"></div>
+                        <div class="legend"></div>
+                    </div>
+                </div>
+                <div class="chart-item">
+                    <div class="ss-tit">机构使用情况</div>
+                    <div class="chart-con" id="chart2">
+                        <p class="chart-tit">全省共接入<span class="em">399</span>家医院</p>
+                        <div id="chart-two"></div>
+                        <div class="legend"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-item">
+            <div class="sub-tit">检验设备数量统计情况<img class="tit-pic" src="images/left02.png"></div>
+            <div class="t-con" id="chart3" style="position: relative;">
+                <div id="chart-three"></div>
+                <div class="legend-b">
+                    <table>
+                        <tr>
+                            <td>临检设备数量&nbsp;&nbsp;&nbsp;</td>
+                            <td>138</td>
+                        </tr>
+                        <tr>
+                            <td>生化设备数量</td>
+                            <td>102</td>
+                        </tr>
+                        <tr>
+                            <td>免疫设备数量</td>
+                            <td>58</td>
+                        </tr>
+                        <tr>
+                            <td>其他</td>
+                            <td>21</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="mid-tit">
+            <table>
+                <tr>
+                    <td rowspan="2" style="font-size: .2rem;">总检验人次<img style="vertical-align:middle;height: .24rem;" src="images/map-logo.png">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td rowspan="2" style="padding-right:.48rem;">
+                        <ul>
+                            <li>
+                                <div class="am_num">
+                                    <div id="total">
+                                        <span class="t_num t_num1"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="map">
+            <div id="cont_pro_map" style="width:6.08rem;height:4.8rem;position: relative;z-index:1;margin-top: -.4rem;"></div>
+            <div id="cont_city_map" style="width:6.08rem;height:4.8rem;display: none;position: relative;z-index:99;margin-top: -.4rem;"></div>
+        </div>
+        <div class="mid-item">
+            <div class="sub-tit">今日检验人次变化趋势<img class="tit-pic" src="images/mid01.png"></div>
+            <div class="t-con" id="chart4">
+                <div id="chart-four"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="left-item right-item">
+            <div class="sub-tit">检验人次区域排名<img class="tit-pic" src="images/right01.png"></div>
+            <div class="t-con r-con">
+                <div id="boxOne">
+                    <div class="scroll" id="scrollOne"></div>
+                    <table boder="1" width="100%" cellspacing="0" cellpadding="" class="r-table" id="R1_table"></table>
+                </div>
+            </div>
+        </div>
+        <div class="left-item right-item" style="margin-bottom:.05rem;">
+            <div class="sub-tit">检验人次医院排名<img class="tit-pic" src="images/right02.png"></div>
+            <div class="t-con r-con">
+                <div id="boxTwo">
+                    <div class="scroll" id="scrollTwo"></div>
+                    <table boder="1" width="100%" cellspacing="0" cellpadding="" class="r-table" id="R2_table"></table>
+                </div>
+            </div>
+        </div>
+        <div class="t-con r-con r-con-last">
+            <div style="padding-top:.1rem;">
+                <table width="96%" cellspacing="0" cellpadding="0" class="r-b-table">
+                    <tr>
+                        <th><img src="images/fx.png" style="width:.2rem;vertical-align: middle;">&nbsp;检验诊断</th>
+                        <th><img src="images/yc.png" style="width:.16rem;vertical-align: middle;">&nbsp;远程检验</th>
+                        <th>无纸化体检</th>
+                    </tr>
+                    <tr>
+                        <td>月检验人次<p class="color-y">26666</p></td>
+                        <td>月检验人次<p class="color-y">26666</p></td>
+                        <td><span class="color-y strong">266</span></td>
+                    </tr>
+                    <tr>
+                        <td>日检验人次<p class="color-y">26666</p></td>
+                        <td>日检验人次<p class="color-y">26666</p></td>
+                        <td><span class="color-y strong">266</span></td>
+                    </tr>
+                    <tr>
+                        <td>总检验人次<p class="color-y">266</p></td>
+                        <td>总检验人次<p class="color-y">266</p></td>
+                        <td><span class="color-y strong">266</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
